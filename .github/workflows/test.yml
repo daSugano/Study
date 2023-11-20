@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: echo
         run: |
-          echo "${GITHUB_REF_NAME}"
+          echo "${{ github.ref_name }}"
       - uses: actions/checkout@v3
         with:
-          ref: ${GITHUB_REF_NAME}
+          ref: ${{ github.ref_name }}
